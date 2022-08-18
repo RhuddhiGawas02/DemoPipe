@@ -1,4 +1,4 @@
-name: dotnet package
+name: build pipeline
 
 on: [push]
 
@@ -16,6 +16,6 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
-          languages: .Net
+          languages: dotnet
       - name: Build
         run: dotnet build AzureFunctionHttp
