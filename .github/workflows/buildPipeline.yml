@@ -13,9 +13,5 @@ jobs:
         run: dotnet --version
       - name: Install dependencies
         run: dotnet restore AzureFunctionHttp
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: dotnet
       - name: Build
         run: dotnet build AzureFunctionHttp
